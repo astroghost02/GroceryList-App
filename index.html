@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery WebApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Grocery WebApp</h1>
+        <p>Find the best deals and compare prices across stores!</p>
+    </header>
+
+    <!-- Filters -->
+    <section id="filters">
+        <h2>Filters</h2>
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="dairy">Dairy</option>
+        </select>
+        <input type="text" id="search-bar" placeholder="Search items..." />
+    </section>
+
+    <!-- Item List -->
+    <section id="item-list">
+        <h2>Available Items</h2>
+        <div id="items-container">
+            <!-- Items will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<section id="filters">
+    <h2>Filters</h2>
+    <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="fruits">Fruits</option>
+        <option value="vegetables">Vegetables</option>
+        <option value="dairy">Dairy</option>
+    </select>
+    <input type="text" id="search-bar" placeholder="Search items..." />
+</section>
+<section id="item-list">
+    <h2>Available Items</h2>
+    <div id="items-container">
+        <!-- Items will be dynamically loaded here -->
+    </div>
+</section>
