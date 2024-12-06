@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header id="main-header">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo">
+      <h1>Grocery WebApp</h1>
+    </div>
+    <nav>
+        <a href="./index.html">Back to Store</a> <!-- Add navigation -->
+    </nav>
+    <div class="user-section">
+      <span id="username-display">Welcome, Guest</span>
+      <button id="logout-button">Logout</button>
+    </div>
+  </header>
+
+  <section id="cart-section">
+    <h2>Your Cart</h2>
+    <div id="cart-container"></div>
+    <button id="checkout-button">Checkout</button>
+  </section>
+
+  <script src="./script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', fetchCart);
+  </script>
+</body>
+</html>

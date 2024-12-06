@@ -1,0 +1,481 @@
+/* style.css */
+
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header */
+  #main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  #main-header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  #main-header .logo img {
+    width: 50px;
+  }
+  
+  #main-header nav a {
+    color: white;
+    margin-right: 15px;
+  }
+  
+  #main-header .user-section {
+    display: flex;
+  }
+  
+  /* Filters Section */
+  #filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+/* Items Section */
+#items-section {
+    padding: 30px;
+  }
+
+
+#main-footer {
+    position: absolute;
+    left: 40%;
+    top: 130%;
+
+  }
+  
+#items-container {
+    display:inline-block;
+    flex-wrap: wrap-reverse;
+    background-color: white;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+/* Shopping Cart */
+#cart-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item h3 {
+    flex-grow: 1;
+}
+
+.cart-item button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #0056b3;
+}
+
+/* Comparison Section */
+#comparison-section {
+    padding: 40px;
+  }
+  
+  #item-select {
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+  
+  #comparison-table {
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  #comparison-table th,
+  #comparison-table td {
+    border: 1px solid #ddd;
+  }
+  
+  #comparison-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  #comparison-table td {
+    padding: 10px;
+  }
+
+/* Main Header */
+/* Header Styling */
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it appears above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#main-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#main-header .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+#main-header .logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    left: -25px;
+    z-index: 1100; /* Ensures it stays above other components */
+}
+
+#username-display {
+    font-size: 1em;
+    color: white;
+}
+
+#user-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+
+#user-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Login Section */
+#login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#login-section h2 {
+    text-align: center;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#login-form label {
+    font-weight: bold;
+}
+
+#login-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#login-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #0056b3;
+}
+
+#login-message {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Cart Sidebar */
+/* Cart Sidebar */
+#cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 60px; /* Aligns below the header */
+    width: 300px;
+    height: calc(100vh - 60px); /* Avoids overlapping with the header */
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    z-index: 900; /* Stays below the header and user icon */
+}
+
+
+#cart-sidebar h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item h3 {
+    flex-grow: 1;
+}
+
+.cart-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Login Modal */
+#login-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#login-modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#close-modal {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* User Section in Header */
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#username-display {
+    font-size: 1em;
+    color: white;
+}
+
+/* Login Modal */
+#login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#login-modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content h2 {
+    margin: 0 0 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+#close-modal {
+    margin-top: 10px;
+    background-color: red;
+}
+
+#username-display {
+    font-size: 1em;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Logout Button */
+#logout-button {
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #e60000;
+}
+
+#logout-button.hidden {
+    display: none;
+}
+
+#cart-section {
+    padding: 20px;
+  }
+  
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+  
+.cart-item h3 {
+    flex-grow: 1;
+}
+  
+.cart-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#comparison-section {
+    margin: 20px auto;
+}
+
+#comparison-table {
+    width: 80%;
+    margin: auto;
+}
+
+#comparison-table th,
+#comparison-table td {
+    border: 1px solid #ddd;
+}
+
+#item-select {
+    padding: 10px;
+}

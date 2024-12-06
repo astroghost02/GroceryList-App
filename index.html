@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery WebApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="main-header">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo">
+      <h1>Grocery WebApp</h1>
+    </div>
+    <nav>
+      <a href="cart.html">Cart</a>
+      <a href="comparison.html">Compare Prices</a>
+    </nav>
+    <div class="user-section">
+      <span id="username-display">Welcome, Guest</span>
+      <button id="logout-button">Logout</button>
+    </div>
+  </header>
+
+  <!-- Filters Section -->
+  <section id="filters">
+    <select id="category-filter">
+      <option value="">All Categories</option>
+      <option value="Fruits">Fruits</option>
+      <option value="Vegetables">Vegetables</option>
+      <option value="Dairy">Dairy</option>
+    </select>
+    <input type="text" id="search-bar" placeholder="Search items...">
+    <button id="search-button">Search</button>
+  </section>
+
+  <!-- Items Section -->
+  <section id="items-section">
+    <h2>Available Items</h2>
+    <div id="items-container"></div> <!-- Items will be dynamically added here -->
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <p>&copy; 2024 Grocery WebApp. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', fetchItems);
+  </script>
+</body>
+</html>
